@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Restaurante Mariscos S.A. de C.V.</title>
+
+    <!-- Logo mostrado en la pestaña del navegador -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="img/logoMariscos.png"
+    >
+
+    <!-- Logo para dispositivos Apple -->
+    <link
+        rel="apple-touch-icon"
+        href="img/logoMariscos.png"
+    >
+
+    <!-- Archivo de estilos -->
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+    <script
+    src="nav.js"
+    defer
+></script>
+
+</head>
+
+<body>
+
+    <!-- =========================================
+     ENCABEZADO Y NAVEGACIÓN
+     ========================================= -->
+<header class="header">
+
+    <nav
+        class="navbar"
+        aria-label="Navegación principal"
+    >
+
+        <!-- Logo y nombre completo del restaurante -->
+        <a
+            href="index.html"
+            class="nav-brand"
+            aria-label="Ir a la página principal"
+        >
+
+            <img
+                src="img/logoMariscos.png"
+                alt="Logo de Restaurante Mariscos"
+                class="nav-brand-logo"
+            >
+
+            <span class="nav-brand-text">
+
+                <span class="nav-brand-name">
+                    Restaurante Mariscos
+                </span>
+
+                <span class="nav-brand-company">
+                    S.A. de C.V.
+                </span>
+
+            </span>
+
+        </a>
+
+        <!-- Botón de navegación para dispositivos móviles -->
+        <button
+            type="button"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-links-principal"
+            aria-label="Abrir menú de navegación"
+        >
+
+            <span
+                class="nav-toggle-line"
+                aria-hidden="true"
+            ></span>
+
+            <span
+                class="nav-toggle-line"
+                aria-hidden="true"
+            ></span>
+
+            <span
+                class="nav-toggle-line"
+                aria-hidden="true"
+            ></span>
+
+        </button>
+
+        <!-- Opciones de navegación -->
+        <ul
+            class="nav-links"
+            id="nav-links-principal"
+        >
+
+            <li>
+                <a
+                    href="menu.html"
+                    class="nav-link"
+                >
+                    Menú
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="facturacion.html"
+                    class="nav-link nav-link-highlighted"
+                >
+                    Facturación
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+         ========================================= -->
+    <main
+        class="contenido-principal"
+        id="menu"
+    >
+
+        <!-- =========================================
+             TÍTULO PRINCIPAL
+             ========================================= -->
+        <h1 class="titulo-principal">
+            Disfruta de nuestros mariscos sabrosos del mar
+        </h1>
+
+        <!-- =========================================
+             GALERÍA DE PLATILLOS
+             ========================================= -->
+        <section
+            class="galeria-mariscos"
+            aria-label="Galería de platillos de mariscos"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1723437496817-01322948c104?q=85&w=1600&auto=format&fit=crop"
+                alt="Platillo de mariscos acompañado de cerveza"
+                class="imagen-platillo"
+                loading="lazy"
+            >
+
+            <img
+                src="https://images.unsplash.com/photo-1735357744836-17ed06db25d9?q=85&w=1600&auto=format&fit=crop"
+                alt="Platillo de camarones preparados"
+                class="imagen-platillo"
+                loading="lazy"
+            >
+
+        </section>
+
+        <!-- =========================================
+             SECCIÓN OBJETIVO
+             ========================================= -->
+        <section class="h2Section">
+
+            <h2>
+                Objetivo
+            </h2>
+
+            <p>
+                Que vivas la experiencia de disfrutar unos mariscos sabrosos
+                como si estuvieras en la playa.
+            </p>
+
+        </section>
+
+        <!-- =========================================
+             SECCIÓN INTRODUCCIÓN A SUCURSALES
+             ========================================= -->
+        <section class="h3Section">
+
+            <img
+                src="https://langostafeliz.com/wp-content/uploads/2019/10/parrillada-restaurante-de-mariscos-puerto-vallarta.jpg"
+                alt="Parrillada de mariscos del restaurante"
+                class="h3Section-image"
+                loading="lazy"
+            >
+
+            <div class="h3Section-content">
+
+                <h3>
+                    Siéntete como en tu casa
+                </h3>
+
+                <p>
+                    Te esperamos en nuestras sucursales Zona Norte,
+                    Zona Centro y Zona Sur.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+             TARJETAS DE SUCURSALES
+             ========================================= -->
+        <section
+            class="sucursales-section"
+            aria-labelledby="titulo-sucursales"
+        >
+
+            <!-- Encabezado de la sección -->
+            <div class="sucursales-encabezado">
+
+                <h2 id="titulo-sucursales">
+                    Nuestras sucursales
+                </h2>
+
+                <p>
+                    Visítanos en la ubicación más cercana y disfruta nuestros
+                    platillos de mariscos.
+                </p>
+
+            </div>
+
+            <!-- Contenedor de las tres tarjetas -->
+            <div class="sucursales-grid">
+
+                <!-- =========================================
+                     SUCURSAL ZONA NORTE
+                     ========================================= -->
+                <article class="sucursal-card">
+
+                    <div class="sucursal-card-header">
+
+                        <h3>
+                            Zona Norte
+                        </h3>
+
+                    </div>
+
+                    <div class="sucursal-card-body">
+
+                        <p>
+                            <strong>
+                                Dirección
+                            </strong>
+
+                            Av. Universidad 1450, Col. Anáhuac,
+                            Monterrey, Nuevo León.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Horario
+                            </strong>
+
+                            Lunes a domingo de 12:00 p. m.
+                            a 10:00 p. m.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Teléfono
+                            </strong>
+
+                            <a
+                                href="tel:+528112345678"
+                                class="telefono-link"
+                            >
+                                81 1234 5678
+                            </a>
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Av.+Universidad+1450,+Col.+Anáhuac,+Monterrey,+Nuevo+León"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="maps-button"
+                            aria-label="Ver la sucursal Zona Norte en Google Maps"
+                        >
+                            Ver en Google Maps
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- =========================================
+                     SUCURSAL ZONA CENTRO
+                     ========================================= -->
+                <article class="sucursal-card">
+
+                    <div class="sucursal-card-header">
+
+                        <h3>
+                            Zona Centro
+                        </h3>
+
+                    </div>
+
+                    <div class="sucursal-card-body">
+
+                        <p>
+                            <strong>
+                                Dirección
+                            </strong>
+
+                            Calle Morelos 325, Centro,
+                            Monterrey, Nuevo León.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Horario
+                            </strong>
+
+                            Lunes a domingo de 11:00 a. m.
+                            a 11:00 p. m.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Teléfono
+                            </strong>
+
+                            <a
+                                href="tel:+528123456789"
+                                class="telefono-link"
+                            >
+                                81 2345 6789
+                            </a>
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Calle+Morelos+325,+Centro,+Monterrey,+Nuevo+León"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="maps-button"
+                            aria-label="Ver la sucursal Zona Centro en Google Maps"
+                        >
+                            Ver en Google Maps
+                        </a>
+
+                    </div>
+
+                </article>
+
+                <!-- =========================================
+                     SUCURSAL ZONA SUR
+                     ========================================= -->
+                <article class="sucursal-card">
+
+                    <div class="sucursal-card-header">
+
+                        <h3>
+                            Zona Sur
+                        </h3>
+
+                    </div>
+
+                    <div class="sucursal-card-body">
+
+                        <p>
+                            <strong>
+                                Dirección
+                            </strong>
+
+                            Av. Garza Sada 2780, Col. Tecnológico,
+                            Monterrey, Nuevo León.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Horario
+                            </strong>
+
+                            Lunes a domingo de 12:00 p. m.
+                            a 10:30 p. m.
+                        </p>
+
+                        <p>
+                            <strong>
+                                Teléfono
+                            </strong>
+
+                            <a
+                                href="tel:+528134567890"
+                                class="telefono-link"
+                            >
+                                81 3456 7890
+                            </a>
+                        </p>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Av.+Garza+Sada+2780,+Col.+Tecnológico,+Monterrey,+Nuevo+León"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="maps-button"
+                            aria-label="Ver la sucursal Zona Sur en Google Maps"
+                        >
+                            Ver en Google Maps
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- =========================================
+             SECCIÓN PEDIDOS
+             ========================================= -->
+        <section class="h4Section">
+
+            <div class="h4Section-content">
+
+                <h4>
+                    Pide tu pedido
+                </h4>
+
+                <p>
+                    Disfruta nuestros mariscos desde donde estés.
+                    Puedes ordenar para llevar, pedir a domicilio o
+                    encontrarnos en tus aplicaciones favoritas.
+                </p>
+
+                <ul class="pedidos-lista">
+
+                    <li>
+                        Pide tu pedido para llevar.
+                    </li>
+
+                    <li>
+                        Pide tu pedido a domicilio.
+                    </li>
+
+                    <li>
+                        Pide a través de Rappi, Uber Eats o DiDi.
+                    </li>
+
+                </ul>
+
+                <a
+                    href="tel:+528112345678"
+                    class="pedido-principal-button"
+                >
+                    Ordenar ahora
+                </a>
+
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1526367790999-0150786686a2?q=85&w=1600&auto=format&fit=crop"
+                alt="Pedido de comida a domicilio"
+                class="h4Section-image"
+                loading="lazy"
+            >
+
+        </section>
+
+
+        <!-- =========================================
+     CATEGORÍAS DEL MENÚ
+     ========================================= -->
+<!-- =========================================
+     CATEGORÍAS DEL MENÚ
+     ========================================= -->
+<section
+    class="menu-categorias-section"
+    id="categorias-menu"
+    aria-labelledby="titulo-categorias-menu"
+>
+
+    <h2
+        class="menu-categorias-titulo"
+        id="titulo-categorias-menu"
+    >
+        Explora nuestro menú
+    </h2>
+
+    <div class="menu-categorias-grid">
+
+        <!-- Entradas -->
+        <a
+            href="menu.html?categoria=entradas"
+            class="menu-categoria-card"
+            aria-label="Ver las entradas del menú"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?q=80&w=1045&auto=format&fit=crop"
+                alt=""
+                class="menu-categoria-imagen"
+                loading="lazy"
+            >
+
+            <span class="menu-categoria-nombre">
+                Entradas
+            </span>
+
+        </a>
+
+        <!-- Tacos -->
+        <a
+            href="menu.html?categoria=tacos"
+            class="menu-categoria-card"
+            aria-label="Ver los tacos del menú"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?q=80&w=1000&auto=format&fit=crop"
+                alt=""
+                class="menu-categoria-imagen"
+                loading="lazy"
+            >
+
+            <span class="menu-categoria-nombre">
+                Tacos
+            </span>
+
+        </a>
+
+        <!-- Tostadas -->
+        <a
+            href="menu.html?categoria=tostadas"
+            class="menu-categoria-card"
+            aria-label="Ver las tostadas del menú"
+        >
+
+            <img
+                src="img/tostadasCamaron.jpg"
+                alt=""
+                class="menu-categoria-imagen"
+                loading="lazy"
+            >
+
+            <span class="menu-categoria-nombre">
+                Tostadas
+            </span>
+
+        </a>
+
+        <!-- Caldos -->
+        <a
+            href="menu.html?categoria=caldos"
+            class="menu-categoria-card"
+            aria-label="Ver los caldos del menú"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1726514731660-08f11ef1fdc1?q=80&w=1200&auto=format&fit=crop"
+                alt=""
+                class="menu-categoria-imagen"
+                loading="lazy"
+            >
+
+            <span class="menu-categoria-nombre">
+                Caldos
+            </span>
+
+        </a>
+
+        <!-- Platillos -->
+        <a
+            href="menu.html?categoria=platillos"
+            class="menu-categoria-card"
+            aria-label="Ver los platillos principales del menú"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1735357744836-17ed06db25d9?q=85&w=1200&auto=format&fit=crop"
+                alt=""
+                class="menu-categoria-imagen"
+                loading="lazy"
+            >
+
+            <span class="menu-categoria-nombre">
+                Platillos
+            </span>
+
+        </a>
+
+        <!-- Bebidas -->
+        <a
+            href="menu.html?categoria=bebidas"
+            class="menu-categoria-card"
+            aria-label="Ver las bebidas del menú"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=85&w=1200&auto=format&fit=crop"
+                alt=""
+                class="menu-categoria-imagen"
+                loading="lazy"
+            >
+
+            <span class="menu-categoria-nombre">
+                Bebidas
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- =========================================
+         PIE DE PÁGINA
+         ========================================= -->
+    <footer class="footer">
+
+        <div
+            class="social-icons"
+            aria-label="Redes sociales"
+        >
+
+            <!-- Facebook -->
+            <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Facebook"
+                class="social-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="social-icon"
+                >
+                    <path
+                        d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.02.28-1.72 1.75-1.72H17.1V2.4c-.32-.04-1.42-.14-2.7-.14-2.67 0-4.5 1.63-4.5 4.62V9.5H7V13h2.9v9h3.6Z"
+                    />
+                </svg>
+
+            </a>
+
+            <!-- Instagram -->
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Instagram"
+                class="social-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="social-icon"
+                >
+                    <path
+                        d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.15 1.5a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+                    />
+                </svg>
+
+            </a>
+
+        </div>
+
+        <p class="footer-text">
+            © 2026 Restaurante Mariscos S.A. de C.V.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

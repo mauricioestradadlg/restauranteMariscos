@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Facturación | Restaurante Mariscos</title>
+
+    <!-- Logo mostrado en la pestaña del navegador -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="img/logoMariscos.png"
+    >
+
+    <!-- Logo para dispositivos Apple -->
+    <link
+        rel="apple-touch-icon"
+        href="img/logoMariscos.png"
+    >
+
+    <!-- Archivo de estilos -->
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+    
+    <script
+    src="nav.js"
+    defer
+></script>
+
+</head>
+
+<body>
+
+    <!-- =========================================
+     ENCABEZADO Y NAVEGACIÓN
+     ========================================= -->
+<header class="header">
+
+    <nav
+        class="navbar"
+        aria-label="Navegación principal"
+    >
+
+        <!-- Logo y nombre completo del restaurante -->
+        <a
+            href="index.html"
+            class="nav-brand"
+            aria-label="Ir a la página principal"
+        >
+
+            <img
+                src="img/logoMariscos.png"
+                alt="Logo de Restaurante Mariscos"
+                class="nav-brand-logo"
+            >
+
+            <span class="nav-brand-text">
+
+                <span class="nav-brand-name">
+                    Restaurante Mariscos
+                </span>
+
+                <span class="nav-brand-company">
+                    S.A. de C.V.
+                </span>
+
+            </span>
+
+        </a>
+
+        <!-- Botón de navegación para dispositivos móviles -->
+        <button
+            type="button"
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="nav-links-principal"
+            aria-label="Abrir menú de navegación"
+        >
+
+            <span
+                class="nav-toggle-line"
+                aria-hidden="true"
+            ></span>
+
+            <span
+                class="nav-toggle-line"
+                aria-hidden="true"
+            ></span>
+
+            <span
+                class="nav-toggle-line"
+                aria-hidden="true"
+            ></span>
+
+        </button>
+
+        <!-- Opciones de navegación -->
+        <ul
+            class="nav-links"
+            id="nav-links-principal"
+        >
+
+            <li>
+                <a
+                    href="menu.html"
+                    class="nav-link"
+                >
+                    Menú
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="facturacion.html"
+                    class="nav-link nav-link-highlighted"
+                >
+                    Facturación
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+         ========================================= -->
+    <main class="facturacion-main">
+
+        <section
+            class="facturacion-section"
+            aria-labelledby="titulo-facturacion"
+        >
+
+            <!-- Título principal -->
+            <h1
+                class="titulo-principal"
+                id="titulo-facturacion"
+            >
+                Facturación
+            </h1>
+
+            <!-- Tarjeta del código QR -->
+            <div class="whatsapp-factura-card">
+
+                <h2 class="whatsapp-factura-titulo">
+                    Envíanos WhatsApp para darte seguimiento con tu factura
+                </h2>
+
+                <p class="whatsapp-factura-descripcion">
+                    Escanea el código QR con la cámara de tu celular para
+                    iniciar una conversación con nuestro equipo.
+                </p>
+
+                <!-- El QR también funciona como enlace -->
+                <a
+                    href="https://wa.me/528126228609?text=Hola%2C%20necesito%20seguimiento%20con%20mi%20factura."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whatsapp-qr-link"
+                    aria-label="Abrir conversación de WhatsApp para seguimiento de factura"
+                >
+
+                    <img
+                        src="./img/qr-whatsapp-facturacion.png"
+                        alt="Código QR para enviar WhatsApp al restaurante"
+                        class="whatsapp-qr"
+                    >
+
+                </a>
+
+                <p class="whatsapp-numero">
+                    +52 81 2622 8609
+                </p>
+
+                <!-- Botón alternativo para abrir WhatsApp -->
+                <a
+                    href="https://wa.me/528126228609?text=Hola%2C%20necesito%20seguimiento%20con%20mi%20factura."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="whatsapp-button"
+                >
+                    Enviar mensaje por WhatsApp
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         PIE DE PÁGINA
+         ========================================= -->
+    <footer class="footer">
+
+        <div
+            class="social-icons"
+            aria-label="Redes sociales"
+        >
+
+            <!-- Facebook -->
+            <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Facebook"
+                class="social-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="social-icon"
+                >
+                    <path
+                        d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.02.28-1.72 1.75-1.72H17.1V2.4c-.32-.04-1.42-.14-2.7-.14-2.67 0-4.5 1.63-4.5 4.62V9.5H7V13h2.9v9h3.6Z"
+                    />
+                </svg>
+
+            </a>
+
+            <!-- Instagram -->
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visitar Instagram"
+                class="social-link"
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    class="social-icon"
+                >
+                    <path
+                        d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.15 1.5a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+                    />
+                </svg>
+
+            </a>
+
+        </div>
+
+        <p class="footer-text">
+            © 2026 Restaurante Mariscos S.A. de C.V.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,2441 @@
+/* =========================================
+   VARIABLES DE COLORES
+   ========================================= */
+
+:root {
+    --azul-principal: #071a2f;
+    --azul-secundario: #0d2e4f;
+
+    --rojo-titulos: #c62828;
+    --rojo-boton: #c62828;
+    --rojo-boton-hover: #a91f1f;
+
+    --dorado: #f3bd4e;
+    --dorado-hover: #ffd273;
+
+    --blanco: #ffffff;
+    --gris-claro: #d8e2ec;
+
+    --fondo-pagina: #f5f7fa;
+    --texto-principal: #17202a;
+
+    --verde-whatsapp: #128c4a;
+    --verde-whatsapp-hover: #0d753c;
+
+    --sombra-navbar:
+        0 4px 18px rgba(0, 0, 0, 0.18);
+
+    --sombra-imagen:
+        0 10px 30px rgba(7, 26, 47, 0.2);
+
+    --sombra-imagen-hover:
+        0 16px 38px rgba(7, 26, 47, 0.3);
+
+    --sombra-tarjeta:
+        0 10px 30px rgba(7, 26, 47, 0.13);
+
+    --sombra-tarjeta-hover:
+        0 18px 40px rgba(7, 26, 47, 0.22);
+}
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background-color: var(--fondo-pagina);
+    color: var(--texto-principal);
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background-color: var(--azul-principal);
+
+    box-shadow: var(--sombra-navbar);
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+
+.navbar {
+    position: relative;
+
+    width: 100%;
+    min-height: 78px;
+
+    padding: 10px 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   LOGO Y NOMBRE DEL RESTAURANTE
+   ========================================= */
+
+.nav-brand {
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--blanco);
+
+    text-decoration: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-brand-logo {
+    width: 70px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.25s ease;
+}
+
+.nav-brand-text {
+    min-width: 0;
+
+    display: flex;
+    align-items: baseline;
+
+    gap: 9px;
+
+    white-space: nowrap;
+}
+
+.nav-brand-name {
+    color: var(--blanco);
+
+    font-size: clamp(19px, 2vw, 25px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.nav-brand-company {
+    color: var(--gris-claro);
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+}
+
+.nav-brand:hover {
+    opacity: 0.92;
+
+    transform: translateY(-1px);
+}
+
+.nav-brand:hover .nav-brand-logo {
+    transform: scale(1.05);
+}
+
+.nav-brand:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 5px;
+
+    border-radius: 8px;
+}
+
+
+/* =========================================
+   OPCIONES DE NAVEGACIÓN
+   ========================================= */
+
+.nav-links {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    list-style: none;
+}
+
+.nav-link {
+    min-height: 44px;
+
+    padding: 11px 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8px;
+
+    color: var(--blanco);
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--dorado);
+
+    background-color: var(--azul-secundario);
+
+    transform: translateY(-1px);
+}
+
+.nav-link:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 3px;
+}
+
+.nav-link-highlighted {
+    border: 1px solid var(--dorado);
+
+    color: var(--azul-principal);
+    background-color: var(--dorado);
+}
+
+.nav-link-highlighted:hover {
+    border-color: var(--dorado-hover);
+
+    color: var(--azul-principal);
+    background-color: var(--dorado-hover);
+}
+
+
+/* =========================================
+   BOTÓN DE NAVEGACIÓN MÓVIL
+   ========================================= */
+
+.nav-toggle {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.45);
+
+    border-radius: 8px;
+
+    color: var(--blanco);
+    background-color: transparent;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.nav-toggle:hover {
+    color: var(--dorado);
+    border-color: var(--dorado);
+
+    background-color: var(--azul-secundario);
+}
+
+.nav-toggle:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 3px;
+}
+
+.nav-toggle-line {
+    width: 23px;
+    height: 2px;
+
+    display: block;
+
+    border-radius: 10px;
+
+    background-color: currentColor;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.nav-toggle-activo .nav-toggle-line:nth-child(1) {
+    transform:
+        translateY(7px)
+        rotate(45deg);
+}
+
+.nav-toggle-activo .nav-toggle-line:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle-activo .nav-toggle-line:nth-child(3) {
+    transform:
+        translateY(-7px)
+        rotate(-45deg);
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+
+.contenido-principal {
+    width: 100%;
+    min-height: calc(100vh - 78px);
+
+    padding:
+        clamp(35px, 4vw, 65px)
+        clamp(18px, 2.5vw, 40px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(35px, 4vw, 65px);
+
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================================
+   TÍTULO PRINCIPAL
+   ========================================= */
+
+.titulo-principal {
+    width: 100%;
+    max-width: 1400px;
+
+    color: var(--azul-principal);
+
+    font-size: clamp(36px, 4vw, 60px);
+    font-weight: 800;
+    line-height: 1.12;
+
+    text-align: center;
+    text-wrap: balance;
+}
+
+
+/* =========================================
+   GALERÍA DE MARISCOS
+   ========================================= */
+
+.galeria-mariscos {
+    width: 100%;
+    max-width: 1800px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    justify-content: center;
+    align-items: center;
+
+    gap: clamp(18px, 1.5vw, 28px);
+}
+
+.imagen-platillo {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-imagen);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.imagen-platillo:hover {
+    transform:
+        translateY(-6px)
+        scale(1.01);
+
+    box-shadow: var(--sombra-imagen-hover);
+}
+
+
+/* =========================================
+   SECCIÓN OBJETIVO
+   ========================================= */
+
+.h2Section {
+    width: 100%;
+    max-width: 2000px;
+
+    margin: 10px auto 0;
+    padding: 35px 25px;
+
+    text-align: center;
+
+    background-color: var(--azul-principal);
+}
+
+.h2Section h2 {
+    margin-bottom: 16px;
+
+    color: var(--rojo-titulos);
+
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.h2Section p {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    color: var(--blanco);
+
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 500;
+    line-height: 1.6;
+
+    text-wrap: balance;
+}
+
+
+/* =========================================
+   SECCIÓN INTRODUCCIÓN A SUCURSALES
+   ========================================= */
+
+.h3Section {
+    width: 100%;
+    max-width: 1800px;
+
+    margin: 10px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-items: center;
+
+    gap: clamp(18px, 1.5vw, 28px);
+}
+
+.h3Section-image {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-imagen);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.h3Section-image:hover {
+    transform:
+        translateY(-6px)
+        scale(1.01);
+
+    box-shadow: var(--sombra-imagen-hover);
+}
+
+.h3Section-content {
+    width: 100%;
+
+    padding: 40px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.h3Section h3 {
+    color: var(--rojo-titulos);
+
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1.15;
+
+    text-wrap: balance;
+}
+
+.h3Section p {
+    max-width: 650px;
+
+    color: var(--texto-principal);
+
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SECCIÓN DE SUCURSALES
+   ========================================= */
+
+.sucursales-section {
+    width: 100%;
+    max-width: 1800px;
+
+    margin: 10px auto 0;
+}
+
+.sucursales-encabezado {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.sucursales-encabezado h2 {
+    margin-bottom: 14px;
+
+    color: var(--rojo-titulos);
+
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.sucursales-encabezado p {
+    color: var(--texto-principal);
+
+    font-size: clamp(18px, 1.6vw, 24px);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.sucursales-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    gap: 28px;
+}
+
+.sucursal-card {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(7, 26, 47, 0.12);
+    border-radius: 16px;
+
+    background-color: var(--blanco);
+
+    box-shadow: var(--sombra-tarjeta);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.sucursal-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--sombra-tarjeta-hover);
+}
+
+.sucursal-card-header {
+    min-height: 125px;
+
+    padding: 26px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--azul-principal);
+}
+
+.sucursal-card-header h3 {
+    width: 100%;
+
+    color: var(--blanco);
+
+    font-size: clamp(22px, 1.7vw, 30px);
+    font-weight: 750;
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+.sucursal-card-body {
+    flex: 1;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.sucursal-card-body p {
+    color: var(--texto-principal);
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.sucursal-card-body strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--rojo-titulos);
+
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.telefono-link {
+    color: var(--azul-secundario);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.25s ease;
+}
+
+.telefono-link:hover {
+    color: var(--rojo-titulos);
+
+    text-decoration: underline;
+}
+
+.telefono-link:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 3px;
+
+    border-radius: 3px;
+}
+
+.maps-button {
+    min-height: 48px;
+
+    margin-top: auto;
+    padding: 12px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--rojo-boton);
+    border-radius: 8px;
+
+    color: var(--blanco);
+    background-color: var(--rojo-boton);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.maps-button:hover {
+    border-color: var(--rojo-boton-hover);
+    background-color: var(--rojo-boton-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(198, 40, 40, 0.25);
+}
+
+.maps-button:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   SECCIÓN PIDE TU PEDIDO
+   ========================================= */
+
+.h4Section {
+    width: 100%;
+    max-width: 1800px;
+
+    margin: 10px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-items: center;
+
+    gap: clamp(18px, 1.5vw, 28px);
+}
+
+.h4Section-content {
+    width: 100%;
+
+    padding: 40px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 22px;
+}
+
+.h4Section h4 {
+    color: var(--rojo-titulos);
+
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1.15;
+
+    text-wrap: balance;
+}
+
+.h4Section p {
+    max-width: 700px;
+
+    color: var(--texto-principal);
+
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.pedidos-lista {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+    list-style-position: inside;
+}
+
+.pedidos-lista li {
+    color: var(--texto-principal);
+
+    font-size: clamp(16px, 1.3vw, 20px);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.pedidos-lista li::marker {
+    color: var(--rojo-titulos);
+}
+
+.pedido-principal-button {
+    min-height: 50px;
+
+    margin-top: 8px;
+    padding: 13px 28px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--rojo-boton);
+    border-radius: 8px;
+
+    color: var(--blanco);
+    background-color: var(--rojo-boton);
+
+    font-size: 17px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.pedido-principal-button:hover {
+    border-color: var(--rojo-boton-hover);
+    background-color: var(--rojo-boton-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(198, 40, 40, 0.25);
+}
+
+.pedido-principal-button:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+.h4Section-image {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-imagen);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.h4Section-image:hover {
+    transform:
+        translateY(-6px)
+        scale(1.01);
+
+    box-shadow: var(--sombra-imagen-hover);
+}
+
+
+/* =========================================
+   PÁGINA DEL MENÚ
+   ========================================= */
+
+.menu-page {
+    justify-content: flex-start;
+}
+
+
+/* =========================================
+   CATEGORÍAS DEL MENÚ
+   ========================================= */
+
+.menu-categorias-section {
+    width: 100%;
+    max-width: 1800px;
+
+    margin: 10px auto 0;
+
+    scroll-margin-top: 110px;
+}
+
+.menu-categorias-titulo {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 15px;
+
+    color: var(--rojo-titulos);
+
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1.2;
+
+    text-align: center;
+    text-wrap: balance;
+}
+
+.menu-categorias-instruccion {
+    max-width: 850px;
+
+    margin: 0 auto 40px;
+
+    color: var(--texto-principal);
+
+    font-size: clamp(18px, 1.6vw, 23px);
+    font-weight: 500;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+.menu-categorias-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+.menu-categoria-card {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    display: block;
+
+    overflow: hidden;
+
+    border: 4px solid transparent;
+    border-radius: 16px;
+
+    appearance: none;
+
+    color: inherit;
+    background-color: var(--azul-principal);
+
+    font-family: inherit;
+    text-align: inherit;
+    text-decoration: none;
+
+    box-shadow: var(--sombra-tarjeta);
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.menu-categoria-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--sombra-tarjeta-hover);
+}
+
+.menu-categoria-card:focus-visible {
+    outline: 4px solid var(--dorado);
+    outline-offset: 5px;
+}
+
+.menu-categoria-card-activa {
+    border-color: var(--rojo-boton);
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(198, 40, 40, 0.25);
+}
+
+.menu-categoria-imagen {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.menu-categoria-card:hover .menu-categoria-imagen,
+.menu-categoria-card-activa .menu-categoria-imagen {
+    transform: scale(1.06);
+
+    filter: brightness(0.8);
+}
+
+.menu-categoria-nombre {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    min-height: 100px;
+
+    padding: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    color: var(--blanco);
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(7, 26, 47, 0.98),
+            rgba(7, 26, 47, 0)
+        );
+
+    font-size: clamp(25px, 2.2vw, 36px);
+    font-weight: 800;
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   RESULTADOS DE LA CATEGORÍA
+   ========================================= */
+
+.menu-resultados-section {
+    width: 100%;
+    max-width: 1800px;
+
+    margin: 25px auto 0;
+
+    scroll-margin-top: 110px;
+}
+
+.menu-resultados-section[hidden] {
+    display: none;
+}
+
+.menu-resultados-encabezado {
+    max-width: 1000px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.menu-resultados-etiqueta {
+    margin-bottom: 8px;
+
+    color: var(--azul-secundario);
+
+    font-size: 16px;
+    font-weight: 750;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.menu-resultados-titulo {
+    margin-bottom: 14px;
+
+    color: var(--rojo-titulos);
+
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1.2;
+
+    text-wrap: balance;
+}
+
+.menu-resultados-descripcion {
+    color: var(--texto-principal);
+
+    font-size: clamp(18px, 1.6vw, 24px);
+    font-weight: 500;
+    line-height: 1.6;
+
+    text-wrap: balance;
+}
+
+.menu-platillos-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    align-items: stretch;
+
+    gap: 28px;
+}
+
+.menu-platillo-card {
+    min-height: 480px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(7, 26, 47, 0.12);
+    border-radius: 16px;
+
+    background-color: var(--blanco);
+
+    box-shadow: var(--sombra-tarjeta);
+
+    animation: mostrarPlatillo 0.4s ease both;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.menu-platillo-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: var(--sombra-tarjeta-hover);
+}
+
+.menu-platillo-card:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.menu-platillo-card:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.menu-platillo-card:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+.menu-platillo-card:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.menu-platillo-card:nth-child(6) {
+    animation-delay: 0.25s;
+}
+
+.menu-platillo-imagen {
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    background-color: var(--gris-claro);
+
+    transition: transform 0.4s ease;
+}
+
+.menu-platillo-card:hover .menu-platillo-imagen {
+    transform: scale(1.03);
+}
+
+.menu-platillo-contenido {
+    flex: 1;
+
+    padding: 26px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.menu-platillo-nombre {
+    color: var(--azul-principal);
+
+    font-size: clamp(22px, 1.8vw, 30px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.menu-platillo-descripcion {
+    color: var(--texto-principal);
+
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.menu-platillo-precio {
+    margin-top: auto;
+
+    color: var(--rojo-titulos);
+
+    font-size: 23px;
+    font-weight: 800;
+}
+
+@keyframes mostrarPlatillo {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   PÁGINA DE FACTURACIÓN
+   ========================================= */
+
+.facturacion-main {
+    width: 100%;
+    min-height: calc(100vh - 78px);
+
+    padding:
+        clamp(40px, 5vw, 75px)
+        clamp(18px, 3vw, 40px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facturacion-section {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.whatsapp-factura-card {
+    width: 100%;
+    max-width: 720px;
+
+    padding: 45px 35px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 22px;
+
+    border: 1px solid rgba(7, 26, 47, 0.12);
+    border-radius: 18px;
+
+    background-color: var(--blanco);
+
+    text-align: center;
+
+    box-shadow: var(--sombra-tarjeta);
+}
+
+.whatsapp-factura-titulo {
+    max-width: 650px;
+
+    color: var(--rojo-titulos);
+
+    font-size: clamp(30px, 3vw, 46px);
+    font-weight: 800;
+    line-height: 1.2;
+
+    text-wrap: balance;
+}
+
+.whatsapp-factura-descripcion {
+    max-width: 580px;
+
+    color: var(--texto-principal);
+
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.whatsapp-qr-link {
+    display: block;
+
+    padding: 12px;
+
+    border-radius: 14px;
+
+    background-color: var(--blanco);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.whatsapp-qr-link:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 10px 25px rgba(7, 26, 47, 0.18);
+}
+
+.whatsapp-qr-link:focus-visible {
+    outline: 4px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+.whatsapp-qr {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.whatsapp-numero {
+    color: var(--azul-principal);
+
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.whatsapp-button {
+    min-height: 52px;
+
+    padding: 14px 28px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--verde-whatsapp);
+    border-radius: 8px;
+
+    color: var(--blanco);
+    background-color: var(--verde-whatsapp);
+
+    font-size: 17px;
+    font-weight: 750;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.whatsapp-button:hover {
+    border-color: var(--verde-whatsapp-hover);
+    background-color: var(--verde-whatsapp-hover);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(18, 140, 74, 0.25);
+}
+
+.whatsapp-button:focus-visible {
+    outline: 4px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
+.footer {
+    width: 100%;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    background-color: #222222;
+    color: var(--blanco);
+
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.social-link {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid var(--blanco);
+    border-radius: 50%;
+
+    color: var(--blanco);
+    background-color: transparent;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+
+    fill: currentColor;
+}
+
+.social-link:hover {
+    color: var(--azul-principal);
+    border-color: var(--dorado);
+    background-color: var(--dorado);
+
+    transform: translateY(-3px);
+}
+
+.social-link:focus-visible {
+    outline: 3px solid var(--dorado);
+    outline-offset: 4px;
+}
+
+.footer-text {
+    color: var(--blanco);
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TABLETS Y PANTALLAS MEDIANAS
+   ========================================= */
+
+@media (max-width: 1200px) {
+
+    .contenido-principal {
+        padding:
+            45px
+            28px;
+
+        gap: 50px;
+    }
+
+    .h3Section-content,
+    .h4Section-content {
+        padding:
+            30px
+            28px;
+    }
+
+    .sucursales-grid,
+    .menu-categorias-grid,
+    .menu-platillos-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   TABLETS CON CUADRÍCULA DE DOS COLUMNAS
+   ========================================= */
+
+@media
+    (min-width: 901px)
+    and (max-width: 1200px) {
+
+    /*
+       Mantiene las sucursales Norte y Centro en la primera fila.
+       La sucursal Zona Sur se coloca centrada en la segunda fila.
+    */
+
+    .sucursal-card:nth-child(3) {
+        grid-column: 1 / -1;
+
+        width:
+            calc(
+                (100% - 28px) / 2
+            );
+
+        justify-self: center;
+    }
+
+}
+
+
+/* =========================================
+   TABLETS VERTICALES
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding:
+            12px
+            18px;
+
+        gap: 18px;
+    }
+
+    .nav-brand-logo {
+        width: 60px;
+        height: 48px;
+    }
+
+    .nav-brand-name {
+        font-size: 20px;
+    }
+
+    .nav-brand-company {
+        font-size: 10px;
+    }
+
+    .nav-link {
+        padding:
+            10px
+            14px;
+
+        font-size: 15px;
+    }
+
+    .contenido-principal {
+        padding:
+            38px
+            22px;
+
+        gap: 45px;
+    }
+
+    .titulo-principal {
+        font-size:
+            clamp(34px, 7vw, 48px);
+    }
+
+    .galeria-mariscos,
+    .h3Section,
+    .h4Section {
+        grid-template-columns:
+            1fr;
+    }
+
+    .h2Section {
+        padding:
+            32px
+            22px;
+
+        border-radius: 14px;
+    }
+
+    .h3Section-content,
+    .h4Section-content {
+        padding:
+            25px
+            8px;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .h3Section p,
+    .h4Section p {
+        margin: 0 auto;
+    }
+
+    .pedidos-lista {
+        width: 100%;
+        max-width: 650px;
+
+        text-align: left;
+    }
+
+    .pedido-principal-button {
+        min-width: 230px;
+    }
+
+    .sucursales-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .sucursal-card {
+        min-height: auto;
+    }
+
+    .sucursal-card-header {
+        min-height: 100px;
+    }
+
+    .facturacion-main {
+        padding:
+            40px
+            22px;
+    }
+
+}
+
+
+/* =========================================
+   AJUSTE DEL H3 EN TABLETS VERTICALES
+   ========================================= */
+
+@media
+    (min-width: 701px)
+    and (max-width: 900px) {
+
+    .h3Section p {
+        font-size: 25px;
+
+        line-height: 1.2;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES Y NAVEGACIÓN DESPLEGABLE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    /* Navegación móvil */
+
+    .header {
+        position: sticky;
+        top: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        min-height: 68px;
+
+        padding:
+            9px
+            12px;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .nav-brand {
+        width: auto;
+        min-width: 0;
+        max-width: 100%;
+
+        justify-content: flex-start;
+
+        gap: 7px;
+
+        overflow: hidden;
+    }
+
+    .nav-brand-logo {
+        width: 48px;
+        height: 42px;
+
+        flex-shrink: 0;
+
+        display: block;
+    }
+
+    .nav-brand-text {
+        min-width: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+
+        gap: 5px;
+
+        overflow: hidden;
+
+        white-space: nowrap;
+    }
+
+    .nav-brand-name {
+        min-width: 0;
+        flex-shrink: 1;
+
+        overflow: hidden;
+
+        font-size:
+            clamp(14px, 3.7vw, 18px);
+
+        line-height: 1.15;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .nav-brand-company {
+        flex-shrink: 0;
+
+        display: inline;
+
+        font-size:
+            clamp(8px, 2.2vw, 10px);
+
+        line-height: 1.2;
+        letter-spacing: 0;
+
+        white-space: nowrap;
+    }
+
+    .nav-toggle {
+        display: flex;
+
+        justify-self: end;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 1001;
+
+        width: 100%;
+
+        margin: 0;
+        padding:
+            0
+            12px;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 8px;
+
+        overflow: hidden;
+
+        border-top:
+            1px solid
+            rgba(255, 255, 255, 0.14);
+
+        background-color:
+            var(--azul-principal);
+
+        box-shadow:
+            0 12px 22px
+            rgba(0, 0, 0, 0.22);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        max-height: 0;
+
+        transform:
+            translateY(-8px);
+
+        transition:
+            max-height 0.3s ease,
+            padding 0.3s ease,
+            opacity 0.25s ease,
+            visibility 0.25s ease,
+            transform 0.3s ease;
+    }
+
+    .nav-links.nav-links-abierto {
+        max-height: 220px;
+
+        padding-top: 12px;
+        padding-bottom: 14px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform:
+            translateY(0);
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-link {
+        width: 100%;
+        min-height: 48px;
+
+        padding:
+            11px
+            16px;
+
+        justify-content: center;
+
+        border:
+            1px solid
+            rgba(255, 255, 255, 0.12);
+
+        font-size: 16px;
+
+        text-align: center;
+    }
+
+    .nav-link-highlighted {
+        border-color: var(--dorado);
+    }
+
+
+    /* Contenido general */
+
+    .contenido-principal {
+        min-height: auto;
+
+        padding:
+            32px
+            16px;
+
+        gap: 40px;
+    }
+
+    .titulo-principal {
+        font-size:
+            clamp(31px, 9vw, 42px);
+
+        line-height: 1.16;
+    }
+
+    .galeria-mariscos,
+    .h2Section,
+    .h3Section,
+    .h4Section,
+    .sucursales-section,
+    .menu-categorias-section,
+    .menu-resultados-section,
+    .facturacion-section {
+        min-width: 0;
+    }
+
+
+    /* Imágenes */
+
+    .imagen-platillo,
+    .h3Section-image,
+    .h4Section-image {
+        aspect-ratio: 4 / 3;
+
+        border-radius: 13px;
+    }
+
+    .imagen-platillo:hover,
+    .h3Section-image:hover,
+    .h4Section-image:hover {
+        transform: none;
+    }
+
+
+    /* Objetivo */
+
+    .h2Section {
+        margin-top: 0;
+
+        padding:
+            28px
+            18px;
+    }
+
+    .h2Section h2 {
+        margin-bottom: 12px;
+
+        font-size:
+            clamp(30px, 9vw, 40px);
+    }
+
+    .h2Section p {
+        font-size:
+            clamp(18px, 5vw, 22px);
+
+        line-height: 1.55;
+    }
+
+
+    /* Introducción a sucursales */
+
+    .h3Section {
+        margin-top: 0;
+
+        gap: 22px;
+    }
+
+    .h3Section-content {
+        padding:
+            10px
+            4px;
+
+        gap: 14px;
+    }
+
+    .h3Section h3 {
+        font-size:
+            clamp(30px, 9vw, 42px);
+    }
+
+    .h3Section p {
+        font-size:
+            clamp(18px, 5vw, 22px);
+    }
+
+
+    /* Sucursales */
+
+    .sucursales-encabezado {
+        margin-bottom: 28px;
+    }
+
+    .sucursales-encabezado h2 {
+        font-size:
+            clamp(30px, 9vw, 42px);
+    }
+
+    .sucursales-encabezado p {
+        font-size: 18px;
+    }
+
+    .sucursales-grid {
+        gap: 22px;
+    }
+
+    .sucursal-card {
+        border-radius: 14px;
+    }
+
+    .sucursal-card:hover {
+        transform: none;
+    }
+
+    .sucursal-card-header {
+        min-height: 90px;
+
+        padding: 20px;
+    }
+
+    .sucursal-card-header h3 {
+        font-size: 24px;
+    }
+
+    .sucursal-card-body {
+        padding: 24px;
+
+        gap: 19px;
+    }
+
+    .sucursal-card-body p {
+        font-size: 14px;
+    }
+
+    .sucursal-card-body strong {
+        font-size: 17px;
+    }
+
+    .maps-button {
+        width: 100%;
+
+        min-height: 50px;
+    }
+
+
+    /* Pedidos */
+
+    .h4Section {
+        margin-top: 0;
+
+        gap: 24px;
+    }
+
+    .h4Section-content {
+        padding:
+            10px
+            4px;
+
+        gap: 18px;
+    }
+
+    .h4Section h4 {
+        font-size:
+            clamp(30px, 9vw, 42px);
+    }
+
+    .h4Section p {
+        font-size:
+            clamp(18px, 5vw, 22px);
+    }
+
+    .pedidos-lista li {
+        font-size: 16px;
+    }
+
+    .pedido-principal-button {
+        width: 100%;
+        min-width: 0;
+        min-height: 52px;
+    }
+
+
+    /* Categorías */
+
+    .menu-categorias-titulo {
+        font-size:
+            clamp(30px, 9vw, 42px);
+    }
+
+    .menu-categorias-instruccion {
+        margin-bottom: 28px;
+
+        font-size: 18px;
+    }
+
+    .menu-categorias-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 22px;
+    }
+
+    .menu-categoria-card {
+        aspect-ratio: 4 / 3;
+
+        border-width: 3px;
+        border-radius: 14px;
+    }
+
+    .menu-categoria-card:hover,
+    .menu-categoria-card-activa {
+        transform: none;
+    }
+
+    .menu-categoria-nombre {
+        min-height: 85px;
+
+        padding: 21px;
+
+        font-size:
+            clamp(26px, 8vw, 34px);
+    }
+
+
+    /* Resultados del menú */
+
+    .menu-resultados-section {
+        margin-top: 10px;
+    }
+
+    .menu-resultados-encabezado {
+        margin-bottom: 28px;
+    }
+
+    .menu-resultados-titulo {
+        font-size:
+            clamp(30px, 9vw, 42px);
+    }
+
+    .menu-resultados-descripcion {
+        font-size: 18px;
+    }
+
+    .menu-platillos-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 22px;
+    }
+
+    .menu-platillo-card {
+        min-height: auto;
+
+        border-radius: 14px;
+    }
+
+    .menu-platillo-card:hover {
+        transform: none;
+    }
+
+    .menu-platillo-contenido {
+        padding: 22px;
+
+        gap: 12px;
+    }
+
+    .menu-platillo-nombre {
+        font-size:
+            clamp(23px, 7vw, 29px);
+    }
+
+    .menu-platillo-descripcion {
+        font-size: 16px;
+    }
+
+    .menu-platillo-precio {
+        font-size: 22px;
+    }
+
+
+    /* Facturación */
+
+    .facturacion-main {
+        min-height: auto;
+
+        padding:
+            32px
+            16px;
+    }
+
+    .facturacion-section {
+        gap: 28px;
+    }
+
+    .whatsapp-factura-card {
+        padding:
+            32px
+            20px;
+
+        gap: 18px;
+    }
+
+    .whatsapp-factura-titulo {
+        font-size:
+            clamp(28px, 8vw, 38px);
+    }
+
+    .whatsapp-factura-descripcion {
+        font-size: 17px;
+    }
+
+    .whatsapp-qr {
+        width: 230px;
+        height: 230px;
+    }
+
+    .whatsapp-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding:
+            28px
+            16px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        min-height: 64px;
+
+        padding:
+            8px
+            9px;
+
+        gap: 7px;
+    }
+
+    .nav-brand {
+        gap: 5px;
+    }
+
+    .nav-brand-logo {
+        width: 42px;
+        height: 38px;
+    }
+
+    .nav-brand-text {
+        gap: 4px;
+    }
+
+    .nav-brand-name {
+        font-size:
+            clamp(13px, 3.8vw, 16px);
+    }
+
+    .nav-brand-company {
+        font-size:
+            clamp(7.5px, 2.1vw, 9px);
+    }
+
+    .nav-toggle {
+        width: 43px;
+        height: 43px;
+    }
+
+    .nav-toggle-line {
+        width: 21px;
+    }
+
+    .contenido-principal {
+        padding:
+            28px
+            12px;
+
+        gap: 34px;
+    }
+
+    .titulo-principal {
+        font-size:
+            clamp(28px, 9vw, 36px);
+    }
+
+    .sucursal-card-body,
+    .menu-platillo-contenido {
+        padding: 20px;
+    }
+
+    .h2Section h2,
+    .h3Section h3,
+    .h4Section h4,
+    .sucursales-encabezado h2,
+    .menu-categorias-titulo,
+    .menu-resultados-titulo {
+        font-size:
+            clamp(28px, 9vw, 36px);
+    }
+
+    .whatsapp-qr {
+        width: 205px;
+        height: 205px;
+    }
+
+    .whatsapp-numero {
+        font-size: 18px;
+    }
+
+    .footer-text {
+        max-width: 290px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES MUY PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        padding-inline: 7px;
+
+        gap: 5px;
+    }
+
+    .nav-brand {
+        gap: 4px;
+    }
+
+    .nav-brand-logo {
+        width: 38px;
+        height: 34px;
+    }
+
+    .nav-brand-text {
+        gap: 3px;
+    }
+
+    .nav-brand-name {
+        font-size:
+            clamp(12px, 3.8vw, 14px);
+    }
+
+    .nav-brand-company {
+        display: inline;
+
+        font-size:
+            clamp(7px, 2vw, 8px);
+    }
+
+    .nav-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-toggle-line {
+        width: 20px;
+    }
+
+    .contenido-principal {
+        padding-inline: 10px;
+    }
+
+    .sucursal-card-body,
+    .menu-platillo-contenido,
+    .whatsapp-factura-card {
+        padding:
+            20px
+            16px;
+    }
+
+    .maps-button,
+    .pedido-principal-button,
+    .whatsapp-button {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================
+   DISPOSITIVOS EN POSICIÓN HORIZONTAL
+   ========================================= */
+
+@media
+    (max-height: 500px)
+    and (orientation: landscape) {
+
+    .navbar {
+        min-height: 64px;
+    }
+
+    .nav-brand-logo {
+        width: 44px;
+        height: 38px;
+    }
+
+    .contenido-principal {
+        padding-top: 28px;
+    }
+
+}
+
+
+/* =========================================
+   REDUCIR ANIMACIONES
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
