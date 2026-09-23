@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -9,679 +10,2216 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Restaurante Mariscos S.A. de C.V.</title>
+    <title>
+        Restaurante Mariscos S.A. de C.V. | Mariscos en Monterrey
+    </title>
 
-    <!-- Logo mostrado en la pestaña del navegador -->
+    <meta
+        name="description"
+        content="Disfruta mariscos frescos en Monterrey. Consulta nuestro menú, promociones, sucursales y reserva tu mesa directamente por WhatsApp."
+    >
+
+
+    <!-- =========================================
+         FAVICON
+         ========================================= -->
+
     <link
         rel="icon"
         type="image/png"
         href="img/logoMariscos.png"
     >
 
-    <!-- Logo para dispositivos Apple -->
     <link
         rel="apple-touch-icon"
         href="img/logoMariscos.png"
     >
 
-    <!-- Archivo de estilos -->
+
+    <!-- =========================================
+         BOOTSTRAP
+         ========================================= -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
+
+    <!-- =========================================
+         CSS PERSONALIZADO
+         ========================================= -->
+
     <link
         rel="stylesheet"
         href="styles.css"
     >
 
-    <script
-    src="nav.js"
-    defer
-></script>
-
 </head>
+
 
 <body>
 
+
     <!-- =========================================
-     ENCABEZADO Y NAVEGACIÓN
-     ========================================= -->
-<header class="header">
+         NAVBAR
+         ========================================= -->
 
-    <nav
-        class="navbar"
-        aria-label="Navegación principal"
-    >
+    <header class="site-header sticky-top">
 
-        <!-- Logo y nombre completo del restaurante -->
-        <a
-            href="index.html"
-            class="nav-brand"
-            aria-label="Ir a la página principal"
+        <nav
+            class="navbar navbar-expand-lg navbar-dark site-navbar"
+            aria-label="Navegación principal"
         >
 
-            <img
-                src="img/logoMariscos.png"
-                alt="Logo de Restaurante Mariscos"
-                class="nav-brand-logo"
-            >
+            <div class="container-xxl">
 
-            <span class="nav-brand-text">
 
-                <span class="nav-brand-name">
-                    Restaurante Mariscos
-                </span>
+                <!-- Marca -->
 
-                <span class="nav-brand-company">
-                    S.A. de C.V.
-                </span>
-
-            </span>
-
-        </a>
-
-        <!-- Botón de navegación para dispositivos móviles -->
-        <button
-            type="button"
-            class="nav-toggle"
-            aria-expanded="false"
-            aria-controls="nav-links-principal"
-            aria-label="Abrir menú de navegación"
-        >
-
-            <span
-                class="nav-toggle-line"
-                aria-hidden="true"
-            ></span>
-
-            <span
-                class="nav-toggle-line"
-                aria-hidden="true"
-            ></span>
-
-            <span
-                class="nav-toggle-line"
-                aria-hidden="true"
-            ></span>
-
-        </button>
-
-        <!-- Opciones de navegación -->
-        <ul
-            class="nav-links"
-            id="nav-links-principal"
-        >
-
-            <li>
                 <a
-                    href="menu.html"
-                    class="nav-link"
+                    class="navbar-brand d-flex align-items-center gap-2"
+                    href="#inicio"
                 >
-                    Menú
-                </a>
-            </li>
 
-            <li>
-                <a
-                    href="facturacion.html"
-                    class="nav-link nav-link-highlighted"
+                    <img
+                        src="img/logoMariscos.png"
+                        alt="Logo de Restaurante Mariscos"
+                        class="brand-logo"
+                    >
+
+                    <span class="d-flex align-items-baseline gap-2">
+
+                        <span class="brand-name">
+                            Restaurante Mariscos
+                        </span>
+
+                        <small class="brand-company d-none d-sm-inline">
+                            S.A. de C.V.
+                        </small>
+
+                    </span>
+
+                </a>
+
+
+                <!-- Botón hamburguesa -->
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Abrir menú de navegación"
                 >
-                    Facturación
-                </a>
-            </li>
 
-        </ul>
+                    <span class="navbar-toggler-icon"></span>
 
-    </nav>
+                </button>
 
-</header>
+
+                <!-- Navegación -->
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar"
+                >
+
+                    <ul
+                        class="navbar-nav ms-auto align-items-lg-center gap-lg-1 py-3 py-lg-0"
+                    >
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link px-lg-3"
+                                href="#inicio"
+                            >
+                                Inicio
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link px-lg-3"
+                                href="#nosotros"
+                            >
+                                Nosotros
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link px-lg-3"
+                                href="#menu"
+                            >
+                                Menú
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link px-lg-3"
+                                href="#sucursales"
+                            >
+                                Sucursales
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link px-lg-3"
+                                href="#contacto"
+                            >
+                                Contacto
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
 
     <!-- =========================================
          CONTENIDO PRINCIPAL
          ========================================= -->
-    <main
-        class="contenido-principal"
-        id="menu"
-    >
+
+    <main>
+
 
         <!-- =========================================
-             TÍTULO PRINCIPAL
+             1. INICIO
              ========================================= -->
-        <h1 class="titulo-principal">
-            Disfruta de nuestros mariscos sabrosos del mar
-        </h1>
 
-        <!-- =========================================
-             GALERÍA DE PLATILLOS
-             ========================================= -->
         <section
-            class="galeria-mariscos"
-            aria-label="Galería de platillos de mariscos"
+            id="inicio"
+            class="hero-section section-anchor"
         >
 
             <img
-                src="https://images.unsplash.com/photo-1723437496817-01322948c104?q=85&w=1600&auto=format&fit=crop"
-                alt="Platillo de mariscos acompañado de cerveza"
-                class="imagen-platillo"
-                loading="lazy"
+                src="img/fondo.png"
+                alt=""
+                class="hero-background-image"
+                fetchpriority="high"
+                decoding="async"
+                aria-hidden="true"
             >
 
-            <img
-                src="https://images.unsplash.com/photo-1735357744836-17ed06db25d9?q=85&w=1600&auto=format&fit=crop"
-                alt="Platillo de camarones preparados"
-                class="imagen-platillo"
-                loading="lazy"
-            >
 
-        </section>
+            <div class="hero-overlay"></div>
 
-        <!-- =========================================
-             SECCIÓN OBJETIVO
-             ========================================= -->
-        <section class="h2Section">
 
-            <h2>
-                Objetivo
-            </h2>
+            <div
+                class="hero-decoration hero-decoration-one"
+                aria-hidden="true"
+            ></div>
 
-            <p>
-                Que vivas la experiencia de disfrutar unos mariscos sabrosos
-                como si estuvieras en la playa.
-            </p>
 
-        </section>
+            <div
+                class="hero-decoration hero-decoration-two"
+                aria-hidden="true"
+            ></div>
 
-        <!-- =========================================
-             SECCIÓN INTRODUCCIÓN A SUCURSALES
-             ========================================= -->
-        <section class="h3Section">
 
-            <img
-                src="https://langostafeliz.com/wp-content/uploads/2019/10/parrillada-restaurante-de-mariscos-puerto-vallarta.jpg"
-                alt="Parrillada de mariscos del restaurante"
-                class="h3Section-image"
-                loading="lazy"
-            >
+            <div class="container-xxl hero-container">
 
-            <div class="h3Section-content">
+                <div class="row justify-content-center">
 
-                <h3>
-                    Siéntete como en tu casa
-                </h3>
+                    <div class="col-12 col-md-11 col-lg-9 col-xl-8">
 
-                <p>
-                    Te esperamos en nuestras sucursales Zona Norte,
-                    Zona Centro y Zona Sur.
-                </p>
+                        <div class="hero-content text-center">
+
+
+                            <div
+                                class="hero-eyebrow-wrapper justify-content-center"
+                            >
+
+                                <span class="hero-eyebrow-line"></span>
+
+                                <p class="hero-eyebrow mb-0">
+                                    MARISCOS • MONTERREY, NUEVO LEÓN
+                                </p>
+
+                                <span class="hero-eyebrow-line"></span>
+
+                            </div>
+
+
+                            <h1 class="hero-title">
+
+                                El sabor del mar
+
+                                <span>
+                                    más cerca de ti
+                                </span>
+
+                            </h1>
+
+
+                            <p class="hero-description mx-auto">
+
+                                Vive la experiencia de disfrutar
+                                unos mariscos sabrosos como si
+                                estuvieras frente al mar.
+
+                            </p>
+
+
+                            <div
+                                class="d-flex flex-column flex-sm-row justify-content-center gap-3 hero-actions"
+                            >
+
+                                <a
+                                    href="#reservar"
+                                    class="btn btn-reservation btn-lg fw-bold px-4"
+                                >
+                                    Reservar Mesa
+                                </a>
+
+
+                                <a
+                                    href="#reservar"
+                                    class="btn btn-outline-hero btn-lg fw-bold px-4"
+                                >
+                                    Ver Disponibilidad
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
 
+
+
         <!-- =========================================
-             TARJETAS DE SUCURSALES
+             2. SOBRE NOSOTROS
              ========================================= -->
+
         <section
-            class="sucursales-section"
-            aria-labelledby="titulo-sucursales"
+            id="nosotros"
+            class="about-section section-anchor"
         >
 
-            <!-- Encabezado de la sección -->
-            <div class="sucursales-encabezado">
+            <img
+                src="img/imgNosotros.png"
+                alt=""
+                class="about-background-image"
+                loading="lazy"
+                decoding="async"
+                aria-hidden="true"
+            >
 
-                <h2 id="titulo-sucursales">
-                    Nuestras sucursales
-                </h2>
 
-                <p>
-                    Visítanos en la ubicación más cercana y disfruta nuestros
-                    platillos de mariscos.
-                </p>
+            <div
+                class="about-decoration about-decoration-one"
+                aria-hidden="true"
+            ></div>
 
-            </div>
 
-            <!-- Contenedor de las tres tarjetas -->
-            <div class="sucursales-grid">
+            <div
+                class="about-decoration about-decoration-two"
+                aria-hidden="true"
+            ></div>
 
-                <!-- =========================================
-                     SUCURSAL ZONA NORTE
-                     ========================================= -->
-                <article class="sucursal-card">
 
-                    <div class="sucursal-card-header">
+            <div class="container-xxl about-container">
 
-                        <h3>
-                            Zona Norte
-                        </h3>
+
+                <div class="about-intro-card text-center mx-auto">
+
+                    <div
+                        class="about-eyebrow-wrapper justify-content-center"
+                    >
+
+                        <span class="about-eyebrow-line"></span>
+
+                        <p class="about-eyebrow mb-0">
+                            SOBRE NOSOTROS
+                        </p>
+
+                        <span class="about-eyebrow-line"></span>
 
                     </div>
 
-                    <div class="sucursal-card-body">
 
-                        <p>
-                            <strong>
-                                Dirección
-                            </strong>
+                    <h2 class="about-title">
 
-                            Av. Universidad 1450, Col. Anáhuac,
-                            Monterrey, Nuevo León.
-                        </p>
+                        Nuestra historia,
 
-                        <p>
-                            <strong>
-                                Horario
-                            </strong>
+                        <span>
+                            nuestro sabor
+                        </span>
 
-                            Lunes a domingo de 12:00 p. m.
-                            a 10:00 p. m.
-                        </p>
+                    </h2>
 
-                        <p>
-                            <strong>
-                                Teléfono
-                            </strong>
 
-                            <a
-                                href="tel:+528112345678"
-                                class="telefono-link"
-                            >
-                                81 1234 5678
-                            </a>
-                        </p>
+                    <p class="about-description">
 
-                        <a
-                            href="https://www.google.com/maps/search/?api=1&query=Av.+Universidad+1450,+Col.+Anáhuac,+Monterrey,+Nuevo+León"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="maps-button"
-                            aria-label="Ver la sucursal Zona Norte en Google Maps"
-                        >
-                            Ver en Google Maps
-                        </a>
+                        Una propuesta nacida en Monterrey para disfrutar
+                        mariscos, buenos momentos y un ambiente para compartir.
 
-                    </div>
+                    </p>
 
-                </article>
+                </div>
 
-                <!-- =========================================
-                     SUCURSAL ZONA CENTRO
-                     ========================================= -->
-                <article class="sucursal-card">
 
-                    <div class="sucursal-card-header">
 
-                        <h3>
-                            Zona Centro
-                        </h3>
-
-                    </div>
-
-                    <div class="sucursal-card-body">
-
-                        <p>
-                            <strong>
-                                Dirección
-                            </strong>
-
-                            Calle Morelos 325, Centro,
-                            Monterrey, Nuevo León.
-                        </p>
-
-                        <p>
-                            <strong>
-                                Horario
-                            </strong>
-
-                            Lunes a domingo de 11:00 a. m.
-                            a 11:00 p. m.
-                        </p>
-
-                        <p>
-                            <strong>
-                                Teléfono
-                            </strong>
-
-                            <a
-                                href="tel:+528123456789"
-                                class="telefono-link"
-                            >
-                                81 2345 6789
-                            </a>
-                        </p>
-
-                        <a
-                            href="https://www.google.com/maps/search/?api=1&query=Calle+Morelos+325,+Centro,+Monterrey,+Nuevo+León"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="maps-button"
-                            aria-label="Ver la sucursal Zona Centro en Google Maps"
-                        >
-                            Ver en Google Maps
-                        </a>
-
-                    </div>
-
-                </article>
-
-                <!-- =========================================
-                     SUCURSAL ZONA SUR
-                     ========================================= -->
-                <article class="sucursal-card">
-
-                    <div class="sucursal-card-header">
-
-                        <h3>
-                            Zona Sur
-                        </h3>
-
-                    </div>
-
-                    <div class="sucursal-card-body">
-
-                        <p>
-                            <strong>
-                                Dirección
-                            </strong>
-
-                            Av. Garza Sada 2780, Col. Tecnológico,
-                            Monterrey, Nuevo León.
-                        </p>
-
-                        <p>
-                            <strong>
-                                Horario
-                            </strong>
-
-                            Lunes a domingo de 12:00 p. m.
-                            a 10:30 p. m.
-                        </p>
-
-                        <p>
-                            <strong>
-                                Teléfono
-                            </strong>
-
-                            <a
-                                href="tel:+528134567890"
-                                class="telefono-link"
-                            >
-                                81 3456 7890
-                            </a>
-                        </p>
-
-                        <a
-                            href="https://www.google.com/maps/search/?api=1&query=Av.+Garza+Sada+2780,+Col.+Tecnológico,+Monterrey,+Nuevo+León"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="maps-button"
-                            aria-label="Ver la sucursal Zona Sur en Google Maps"
-                        >
-                            Ver en Google Maps
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- =========================================
-             SECCIÓN PEDIDOS
-             ========================================= -->
-        <section class="h4Section">
-
-            <div class="h4Section-content">
-
-                <h4>
-                    Pide tu pedido
-                </h4>
-
-                <p>
-                    Disfruta nuestros mariscos desde donde estés.
-                    Puedes ordenar para llevar, pedir a domicilio o
-                    encontrarnos en tus aplicaciones favoritas.
-                </p>
-
-                <ul class="pedidos-lista">
-
-                    <li>
-                        Pide tu pedido para llevar.
-                    </li>
-
-                    <li>
-                        Pide tu pedido a domicilio.
-                    </li>
-
-                    <li>
-                        Pide a través de Rappi, Uber Eats o DiDi.
-                    </li>
-
-                </ul>
-
-                <a
-                    href="tel:+528112345678"
-                    class="pedido-principal-button"
+                <div
+                    class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-4 about-grid"
                 >
-                    Ordenar ahora
-                </a>
+
+
+                    <div class="col d-flex">
+
+                        <article class="about-card h-100 w-100">
+
+                            <p class="about-card-label">
+                                HISTORIA
+                            </p>
+
+                            <h3>
+                                Un proyecto familiar
+                            </h3>
+
+                            <p class="about-card-text">
+
+                                Nacimos en Monterrey con la idea de
+                                compartir mariscos llenos de sabor en
+                                un ambiente para disfrutar.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="about-card h-100 w-100">
+
+                            <p class="about-card-label">
+                                MISIÓN
+                            </p>
+
+                            <h3>
+                                Hacerte querer volver
+                            </h3>
+
+                            <p class="about-card-text">
+
+                                Brindar buen sabor, atención cercana
+                                y una experiencia agradable en cada visita.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="about-card h-100 w-100">
+
+                            <p class="about-card-label">
+                                VISIÓN
+                            </p>
+
+                            <h3>
+                                Ser un referente local
+                            </h3>
+
+                            <p class="about-card-text">
+
+                                Ser reconocidos en Monterrey por nuestros
+                                mariscos, servicio y ambiente.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="about-card h-100 w-100">
+
+                            <p class="about-card-label">
+                                VALORES
+                            </p>
+
+                            <h3>
+                                Lo que nos representa
+                            </h3>
+
+
+                            <ul class="about-values-list">
+
+                                <li>
+                                    <span aria-hidden="true">✨</span>
+                                    Calidad
+                                </li>
+
+                                <li>
+                                    <span aria-hidden="true">🌊</span>
+                                    Frescura
+                                </li>
+
+                                <li>
+                                    <span aria-hidden="true">🤝</span>
+                                    Hospitalidad
+                                </li>
+
+                                <li>
+                                    <span aria-hidden="true">💙</span>
+                                    Compromiso
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+                    </div>
+
+                </div>
 
             </div>
-
-            <img
-                src="https://images.unsplash.com/photo-1526367790999-0150786686a2?q=85&w=1600&auto=format&fit=crop"
-                alt="Pedido de comida a domicilio"
-                class="h4Section-image"
-                loading="lazy"
-            >
 
         </section>
 
 
+
         <!-- =========================================
-     CATEGORÍAS DEL MENÚ
-     ========================================= -->
-<!-- =========================================
-     CATEGORÍAS DEL MENÚ
-     ========================================= -->
-<section
-    class="menu-categorias-section"
-    id="categorias-menu"
-    aria-labelledby="titulo-categorias-menu"
->
+             3. MENÚ
+             ========================================= -->
 
-    <h2
-        class="menu-categorias-titulo"
-        id="titulo-categorias-menu"
-    >
-        Explora nuestro menú
-    </h2>
-
-    <div class="menu-categorias-grid">
-
-        <!-- Entradas -->
-        <a
-            href="menu.html?categoria=entradas"
-            class="menu-categoria-card"
-            aria-label="Ver las entradas del menú"
+        <section
+            id="menu"
+            class="menu-section section-anchor"
         >
 
             <img
-                src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?q=80&w=1045&auto=format&fit=crop"
+                src="https://media-cdn.tripadvisor.com/media/photo-s/2b/f4/e3/c0/platillos-de-mariscos.jpg"
                 alt=""
-                class="menu-categoria-imagen"
+                class="menu-background-image"
                 loading="lazy"
+                decoding="async"
+                aria-hidden="true"
             >
 
-            <span class="menu-categoria-nombre">
-                Entradas
-            </span>
 
-        </a>
+            <div class="menu-overlay"></div>
 
-        <!-- Tacos -->
-        <a
-            href="menu.html?categoria=tacos"
-            class="menu-categoria-card"
-            aria-label="Ver los tacos del menú"
+
+            <div class="container-xxl menu-container">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-lg-10 col-xl-8">
+
+                        <div class="menu-content-card text-center mx-auto">
+
+
+                            <div
+                                class="menu-eyebrow-wrapper justify-content-center"
+                            >
+
+                                <span class="menu-eyebrow-line"></span>
+
+                                <p class="menu-eyebrow mb-0">
+                                    NUESTRO MENÚ
+                                </p>
+
+                                <span class="menu-eyebrow-line"></span>
+
+                            </div>
+
+
+                            <h2 class="menu-title">
+
+                                Encuentra tu
+
+                                <span>
+                                    platillo favorito
+                                </span>
+
+                            </h2>
+
+
+                            <p class="menu-description mx-auto">
+
+                                Desde algo ligero para comenzar hasta nuestros
+                                platillos principales. Descubre los sabores del mar
+                                que tenemos preparados para ti.
+
+                            </p>
+
+
+                            <div
+                                class="menu-category-list justify-content-center"
+                            >
+
+                                <span>🦐 Entradas</span>
+
+                                <span>🌮 Tacos</span>
+
+                                <span>🐟 Tostadas</span>
+
+                                <span>🍲 Caldos</span>
+
+                                <span>🍽️ Platillos</span>
+
+                                <span>🥤 Bebidas</span>
+
+                            </div>
+
+
+                            <a
+                                href="menuMariscos.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-gold btn-lg fw-bold px-5 menu-button"
+                            >
+                                Ver Menú Completo
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             4. PROMOCIONES
+             ========================================= -->
+
+        <section
+            id="beneficios"
+            class="section-padding experience-section section-anchor"
         >
 
-            <img
-                src="https://images.unsplash.com/photo-1624300629298-e9de39c13be5?q=80&w=1000&auto=format&fit=crop"
-                alt=""
-                class="menu-categoria-imagen"
-                loading="lazy"
-            >
+            <div class="container-xxl">
 
-            <span class="menu-categoria-nombre">
-                Tacos
-            </span>
 
-        </a>
+                <div
+                    class="section-heading text-center mx-auto mb-5"
+                >
 
-        <!-- Tostadas -->
-        <a
-            href="menu.html?categoria=tostadas"
-            class="menu-categoria-card"
-            aria-label="Ver las tostadas del menú"
+                    <p class="section-eyebrow">
+                        PROMOCIONES
+                    </p>
+
+
+                    <h2 class="section-title">
+                        Siempre hay una buena razón para volver
+                    </h2>
+
+
+                    <p class="section-description mt-3">
+
+                        Aprovecha nuestras promociones de la semana y disfruta
+                        tus platillos favoritos del mar a un precio especial.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4"
+                >
+
+
+                    <div class="col d-flex">
+
+                        <article class="experience-card h-100 w-100">
+
+                            <div class="experience-icon">
+                                01
+                            </div>
+
+                            <span class="promotion-day">
+                                MARTES
+                            </span>
+
+                            <h3>
+                                2x1 en tacos de camarón
+                            </h3>
+
+                            <p>
+
+                                Pide tus tacos de camarón favoritos y recibe
+                                el segundo sin costo en órdenes participantes.
+
+                            </p>
+
+                            <small class="promotion-note">
+
+                                Válido los martes de 4:00 p. m. al cierre.
+
+                            </small>
+
+                            <a
+                                href="https://wa.me/525634893797"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-red fw-bold w-100 mt-auto js-whatsapp-link"
+                                data-whatsapp-message="Hola, me gustaría pedir información sobre la promoción 2x1 en tacos de camarón."
+                            >
+                                Quiero esta promoción
+                            </a>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="experience-card h-100 w-100">
+
+                            <div class="experience-icon">
+                                02
+                            </div>
+
+                            <span class="promotion-day">
+                                MIÉRCOLES
+                            </span>
+
+                            <h3>
+                                3x2 en tostadas
+                            </h3>
+
+                            <p>
+
+                                Combina tostadas de ceviche, camarón o pescado
+                                y disfruta tres pagando solamente dos.
+
+                            </p>
+
+                            <small class="promotion-note">
+
+                                Válido en tostadas seleccionadas.
+
+                            </small>
+
+                            <a
+                                href="https://wa.me/525634893797"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-red fw-bold w-100 mt-auto js-whatsapp-link"
+                                data-whatsapp-message="Hola, me gustaría pedir información sobre la promoción 3x2 en tostadas."
+                            >
+                                Quiero esta promoción
+                            </a>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="experience-card h-100 w-100">
+
+                            <div class="experience-icon">
+                                03
+                            </div>
+
+                            <span class="promotion-day">
+                                JUEVES
+                            </span>
+
+                            <h3>
+                                20% en platillos de camarón
+                            </h3>
+
+                            <p>
+
+                                Disfruta un descuento especial en nuestros
+                                platillos de camarón participantes.
+
+                            </p>
+
+                            <small class="promotion-note">
+
+                                Disponible durante todo el jueves.
+
+                            </small>
+
+                            <a
+                                href="https://wa.me/525634893797"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-red fw-bold w-100 mt-auto js-whatsapp-link"
+                                data-whatsapp-message="Hola, me gustaría pedir información sobre la promoción de 20% en platillos de camarón."
+                            >
+                                Quiero esta promoción
+                            </a>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="experience-card h-100 w-100">
+
+                            <div class="experience-icon">
+                                04
+                            </div>
+
+                            <span class="promotion-day">
+                                CUMPLEAÑOS
+                            </span>
+
+                            <h3>
+                                Celebra con nosotros
+                            </h3>
+
+                            <p>
+
+                                En tu cumpleaños recibe un postre de cortesía
+                                al visitarnos acompañado de tu familia o amigos.
+
+                            </p>
+
+                            <small class="promotion-note">
+
+                                Presenta una identificación vigente.
+
+                            </small>
+
+                            <a
+                                href="https://wa.me/525634893797"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-red fw-bold w-100 mt-auto js-whatsapp-link"
+                                data-whatsapp-message="Hola, me gustaría pedir información sobre la promoción de cumpleaños."
+                            >
+                                Consultar promoción
+                            </a>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             5. RESEÑAS
+             ========================================= -->
+
+        <section
+            id="resenas"
+            class="section-padding reviews-section section-anchor"
         >
 
-            <img
-                src="img/tostadasCamaron.jpg"
-                alt=""
-                class="menu-categoria-imagen"
-                loading="lazy"
-            >
+            <div class="container-xxl">
 
-            <span class="menu-categoria-nombre">
-                Tostadas
-            </span>
 
-        </a>
+                <div
+                    class="section-heading text-center mx-auto mb-5"
+                >
 
-        <!-- Caldos -->
-        <a
-            href="menu.html?categoria=caldos"
-            class="menu-categoria-card"
-            aria-label="Ver los caldos del menú"
+                    <p class="section-eyebrow">
+                        RESEÑAS
+                    </p>
+
+
+                    <h2 class="section-title">
+                        Lo que dicen nuestros clientes
+                    </h2>
+
+
+                    <p class="section-description mt-3">
+
+                        Conoce algunas de las experiencias de quienes
+                        ya han disfrutado nuestros platillos.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-center"
+                >
+
+
+                    <div class="col d-flex">
+
+                        <article class="review-card h-100 w-100">
+
+                            <div class="review-top">
+
+                                <span class="review-quote">
+                                    “
+                                </span>
+
+                                <div class="review-stars">
+                                    ★★★★★
+                                </div>
+
+                            </div>
+
+
+                            <p>
+
+                                Los mariscos estaban muy frescos y todo llegó
+                                con excelente presentación. Definitivamente
+                                volveremos con la familia.
+
+                            </p>
+
+
+                            <div class="review-author">
+
+                                <div class="review-avatar">
+                                    A
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Andrea M.
+                                    </strong>
+
+                                    <small>
+                                        Cliente
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="review-card h-100 w-100">
+
+                            <div class="review-top">
+
+                                <span class="review-quote">
+                                    “
+                                </span>
+
+                                <div class="review-stars">
+                                    ★★★★★
+                                </div>
+
+                            </div>
+
+
+                            <p>
+
+                                Muy buen sabor y excelente atención.
+                                Los tacos de camarón y las tostadas
+                                fueron nuestros favoritos.
+
+                            </p>
+
+
+                            <div class="review-author">
+
+                                <div class="review-avatar">
+                                    R
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Ricardo G.
+                                    </strong>
+
+                                    <small>
+                                        Cliente
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <div class="col d-flex">
+
+                        <article class="review-card h-100 w-100">
+
+                            <div class="review-top">
+
+                                <span class="review-quote">
+                                    “
+                                </span>
+
+                                <div class="review-stars">
+                                    ★★★★★
+                                </div>
+
+                            </div>
+
+
+                            <p>
+
+                                El ambiente está muy agradable y los platillos
+                                tienen muy buena porción. Una excelente opción
+                                para comer mariscos.
+
+                            </p>
+
+
+                            <div class="review-author">
+
+                                <div class="review-avatar">
+                                    M
+                                </div>
+
+                                <div>
+
+                                    <strong>
+                                        Mariana S.
+                                    </strong>
+
+                                    <small>
+                                        Cliente
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             6. RESERVACIÓN
+             ========================================= -->
+
+        <section
+            id="reservar"
+            class="reservation-section section-anchor"
         >
 
-            <img
-                src="https://images.unsplash.com/photo-1726514731660-08f11ef1fdc1?q=80&w=1200&auto=format&fit=crop"
-                alt=""
-                class="menu-categoria-imagen"
-                loading="lazy"
-            >
+            <div class="reservation-overlay"></div>
 
-            <span class="menu-categoria-nombre">
-                Caldos
-            </span>
 
-        </a>
+            <div class="container-xxl reservation-container">
 
-        <!-- Platillos -->
-        <a
-            href="menu.html?categoria=platillos"
-            class="menu-categoria-card"
-            aria-label="Ver los platillos principales del menú"
+
+                <!-- Encabezado -->
+
+                <div class="reservation-heading text-center">
+
+                    <p class="reservation-eyebrow">
+                        RESERVACIONES
+                    </p>
+
+
+                    <h2 class="reservation-title">
+
+                        Tu mesa te está
+
+                        <span>
+                            esperando
+                        </span>
+
+                    </h2>
+
+
+                    <p class="reservation-description">
+
+                        Elige cuándo visitarnos y solicita tu reservación.
+
+                    </p>
+
+                </div>
+
+
+                <br>
+
+
+                <!-- Formulario -->
+
+                <div class="reservation-card">
+
+                    <div class="reservation-card-header text-center">
+
+                        <p class="reservation-card-label">
+                            RESERVA TU MESA
+                        </p>
+
+
+                        <h3>
+                            Completa los datos
+                        </h3>
+
+
+                        <p>
+                            Te confirmaremos la disponibilidad por WhatsApp.
+                        </p>
+
+                    </div>
+
+
+
+                    <form
+                        id="reservation-form"
+                        class="reservation-form"
+                    >
+
+                        <div class="row g-3">
+
+
+                            <!-- Nombre -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-name"
+                                    class="form-label"
+                                >
+                                    Nombre completo *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control reservation-control"
+                                    id="reservation-name"
+                                    name="nombre"
+                                    placeholder="Ej. Mauricio Estrada"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Teléfono -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-phone"
+                                    class="form-label"
+                                >
+                                    Teléfono / WhatsApp *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    class="form-control reservation-control"
+                                    id="reservation-phone"
+                                    name="telefono"
+                                    placeholder="Ej. 81 1234 5678"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Correo -->
+
+                            <div class="col-12">
+
+                                <label
+                                    for="reservation-email"
+                                    class="form-label"
+                                >
+                                    Correo electrónico
+
+                                    <span class="optional-field">
+                                        (opcional)
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control reservation-control"
+                                    id="reservation-email"
+                                    name="correo"
+                                    placeholder="correo@ejemplo.com"
+                                    autocomplete="email"
+                                >
+
+                            </div>
+
+
+
+                            <!-- Personas -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-people"
+                                    class="form-label"
+                                >
+                                    Número de personas *
+                                </label>
+
+                                <select
+                                    class="form-select reservation-control"
+                                    id="reservation-people"
+                                    name="personas"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Selecciona
+                                    </option>
+
+                                    <option value="1">
+                                        1 persona
+                                    </option>
+
+                                    <option value="2">
+                                        2 personas
+                                    </option>
+
+                                    <option value="3">
+                                        3 personas
+                                    </option>
+
+                                    <option value="4">
+                                        4 personas
+                                    </option>
+
+                                    <option value="5">
+                                        5 personas
+                                    </option>
+
+                                    <option value="6">
+                                        6 personas
+                                    </option>
+
+                                    <option value="7">
+                                        7 personas
+                                    </option>
+
+                                    <option value="8">
+                                        8 personas
+                                    </option>
+
+                                    <option value="9">
+                                        9 personas
+                                    </option>
+
+                                    <option value="10">
+                                        10 personas
+                                    </option>
+
+                                    <option value="Más de 10 personas">
+                                        Más de 10 personas
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- Sucursal -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-location"
+                                    class="form-label"
+                                >
+                                    Sucursal *
+                                </label>
+
+                                <select
+                                    class="form-select reservation-control"
+                                    id="reservation-location"
+                                    name="sucursal"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Selecciona
+                                    </option>
+
+                                    <option value="Zona Norte">
+                                        Zona Norte
+                                    </option>
+
+                                    <option value="Zona Centro">
+                                        Zona Centro
+                                    </option>
+
+                                    <option value="Zona Sur">
+                                        Zona Sur
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- Fecha -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-date"
+                                    class="form-label"
+                                >
+                                    Fecha *
+                                </label>
+
+                                <input
+                                    type="date"
+                                    class="form-control reservation-control"
+                                    id="reservation-date"
+                                    name="fecha"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Hora -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-time"
+                                    class="form-label"
+                                >
+                                    Hora *
+                                </label>
+
+                                <select
+                                    class="form-select reservation-control"
+                                    id="reservation-time"
+                                    name="hora"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Selecciona
+                                    </option>
+
+                                    <option value="12:00 p. m.">
+                                        12:00 p. m.
+                                    </option>
+
+                                    <option value="12:30 p. m.">
+                                        12:30 p. m.
+                                    </option>
+
+                                    <option value="1:00 p. m.">
+                                        1:00 p. m.
+                                    </option>
+
+                                    <option value="1:30 p. m.">
+                                        1:30 p. m.
+                                    </option>
+
+                                    <option value="2:00 p. m.">
+                                        2:00 p. m.
+                                    </option>
+
+                                    <option value="2:30 p. m.">
+                                        2:30 p. m.
+                                    </option>
+
+                                    <option value="3:00 p. m.">
+                                        3:00 p. m.
+                                    </option>
+
+                                    <option value="3:30 p. m.">
+                                        3:30 p. m.
+                                    </option>
+
+                                    <option value="4:00 p. m.">
+                                        4:00 p. m.
+                                    </option>
+
+                                    <option value="4:30 p. m.">
+                                        4:30 p. m.
+                                    </option>
+
+                                    <option value="5:00 p. m.">
+                                        5:00 p. m.
+                                    </option>
+
+                                    <option value="5:30 p. m.">
+                                        5:30 p. m.
+                                    </option>
+
+                                    <option value="6:00 p. m.">
+                                        6:00 p. m.
+                                    </option>
+
+                                    <option value="6:30 p. m.">
+                                        6:30 p. m.
+                                    </option>
+
+                                    <option value="7:00 p. m.">
+                                        7:00 p. m.
+                                    </option>
+
+                                    <option value="7:30 p. m.">
+                                        7:30 p. m.
+                                    </option>
+
+                                    <option value="8:00 p. m.">
+                                        8:00 p. m.
+                                    </option>
+
+                                    <option value="8:30 p. m.">
+                                        8:30 p. m.
+                                    </option>
+
+                                    <option value="9:00 p. m.">
+                                        9:00 p. m.
+                                    </option>
+
+                                    <option value="9:30 p. m.">
+                                        9:30 p. m.
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- Ocasión -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-occasion"
+                                    class="form-label"
+                                >
+                                    Ocasión especial
+
+                                    <span class="optional-field">
+                                        (opcional)
+                                    </span>
+
+                                </label>
+
+                                <select
+                                    class="form-select reservation-control"
+                                    id="reservation-occasion"
+                                    name="ocasion"
+                                >
+
+                                    <option value="Ninguna" selected>
+                                        Ninguna
+                                    </option>
+
+                                    <option value="Cumpleaños">
+                                        Cumpleaños
+                                    </option>
+
+                                    <option value="Aniversario">
+                                        Aniversario
+                                    </option>
+
+                                    <option value="Reunión familiar">
+                                        Reunión familiar
+                                    </option>
+
+                                    <option value="Reunión de negocios">
+                                        Reunión de negocios
+                                    </option>
+
+                                    <option value="Otra ocasión especial">
+                                        Otra ocasión especial
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- Comentarios -->
+
+                            <div class="col-12 col-md-6">
+
+                                <label
+                                    for="reservation-comments"
+                                    class="form-label"
+                                >
+                                    Comentarios
+
+                                    <span class="optional-field">
+                                        (opcional)
+                                    </span>
+
+                                </label>
+
+                                <textarea
+                                    class="form-control reservation-control reservation-textarea"
+                                    id="reservation-comments"
+                                    name="comentarios"
+                                    rows="2"
+                                    placeholder="Silla para bebé, terraza, alergias, etc."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Submit -->
+
+                        <div class="reservation-submit-area">
+
+                            <button
+                                type="submit"
+                                class="btn btn-reservation-submit btn-lg"
+                            >
+                                Solicitar Reservación
+                            </button>
+
+
+                            <p>
+
+                                La reservación queda sujeta a confirmación
+                                del restaurante.
+
+                            </p>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             7. SUCURSALES
+             ========================================= -->
+
+        <section
+            id="sucursales"
+            class="section-padding locations-section section-anchor"
         >
 
-            <img
-                src="https://images.unsplash.com/photo-1735357744836-17ed06db25d9?q=85&w=1200&auto=format&fit=crop"
-                alt=""
-                class="menu-categoria-imagen"
-                loading="lazy"
-            >
+            <div class="container-xxl">
 
-            <span class="menu-categoria-nombre">
-                Platillos
-            </span>
 
-        </a>
+                <div
+                    class="section-heading text-center mx-auto mb-5"
+                >
 
-        <!-- Bebidas -->
-        <a
-            href="menu.html?categoria=bebidas"
-            class="menu-categoria-card"
-            aria-label="Ver las bebidas del menú"
-        >
+                    <p class="section-eyebrow">
+                        CONTACTO Y UBICACIÓN
+                    </p>
 
-            <img
-                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=85&w=1200&auto=format&fit=crop"
-                alt=""
-                class="menu-categoria-imagen"
-                loading="lazy"
-            >
 
-            <span class="menu-categoria-nombre">
-                Bebidas
-            </span>
+                    <h2 class="section-title">
+                        Encuentra tu sucursal
+                    </h2>
 
-        </a>
 
-    </div>
+                    <p class="section-description mt-3">
 
-</section>
+                        Visítanos en la ubicación más cercana
+                        y disfruta nuestros platillos de mariscos.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 justify-content-center"
+                >
+
+
+                    <!-- Norte -->
+
+                    <div class="col d-flex">
+
+                        <article class="location-card h-100 w-100">
+
+                            <div class="location-number">
+                                01
+                            </div>
+
+
+                            <div class="location-card-content">
+
+                                <p class="location-zone-label">
+                                    SUCURSAL
+                                </p>
+
+                                <h3>
+                                    Zona Norte
+                                </h3>
+
+                                <div class="location-separator"></div>
+
+
+                                <div class="location-info">
+
+                                    <div>
+
+                                        <strong>
+                                            Dirección
+                                        </strong>
+
+                                        <p>
+
+                                            Av. Universidad 1450,
+                                            Col. Anáhuac,
+                                            Monterrey, Nuevo León.
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Horario
+                                        </strong>
+
+                                        <p>
+
+                                            Lunes a domingo de
+                                            12:00 p. m. a 10:00 p. m.
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Teléfono
+                                        </strong>
+
+                                        <a href="tel:+525634893797">
+                                            56 3489 3797
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=Av.+Universidad+1450,+Col.+Anáhuac,+Monterrey,+Nuevo+León"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-red fw-bold w-100 mt-auto"
+                                >
+                                    Ver en Google Maps
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- Centro -->
+
+                    <div class="col d-flex">
+
+                        <article class="location-card h-100 w-100">
+
+                            <div class="location-number">
+                                02
+                            </div>
+
+
+                            <div class="location-card-content">
+
+                                <p class="location-zone-label">
+                                    SUCURSAL
+                                </p>
+
+                                <h3>
+                                    Zona Centro
+                                </h3>
+
+                                <div class="location-separator"></div>
+
+
+                                <div class="location-info">
+
+                                    <div>
+
+                                        <strong>
+                                            Dirección
+                                        </strong>
+
+                                        <p>
+
+                                            Calle Morelos 325,
+                                            Centro, Monterrey,
+                                            Nuevo León.
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Horario
+                                        </strong>
+
+                                        <p>
+
+                                            Lunes a domingo de
+                                            11:00 a. m. a 11:00 p. m.
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Teléfono
+                                        </strong>
+
+                                        <a href="tel:+525634893797">
+                                            56 3489 3797
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=Calle+Morelos+325,+Centro,+Monterrey,+Nuevo+León"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-red fw-bold w-100 mt-auto"
+                                >
+                                    Ver en Google Maps
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+
+                    <!-- Sur -->
+
+                    <div class="col d-flex">
+
+                        <article class="location-card h-100 w-100">
+
+                            <div class="location-number">
+                                03
+                            </div>
+
+
+                            <div class="location-card-content">
+
+                                <p class="location-zone-label">
+                                    SUCURSAL
+                                </p>
+
+                                <h3>
+                                    Zona Sur
+                                </h3>
+
+                                <div class="location-separator"></div>
+
+
+                                <div class="location-info">
+
+                                    <div>
+
+                                        <strong>
+                                            Dirección
+                                        </strong>
+
+                                        <p>
+
+                                            Av. Garza Sada 2780,
+                                            Col. Tecnológico,
+                                            Monterrey, Nuevo León.
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Horario
+                                        </strong>
+
+                                        <p>
+
+                                            Lunes a domingo de
+                                            12:00 p. m. a 10:30 p. m.
+
+                                        </p>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <strong>
+                                            Teléfono
+                                        </strong>
+
+                                        <a href="tel:+525634893797">
+                                            56 3489 3797
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+
+                                <a
+                                    href="https://www.google.com/maps/search/?api=1&query=Av.+Garza+Sada+2780,+Col.+Tecnológico,+Monterrey,+Nuevo+León"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="btn btn-red fw-bold w-100 mt-auto"
+                                >
+                                    Ver en Google Maps
+                                </a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
+
+
     <!-- =========================================
-         PIE DE PÁGINA
+         FOOTER
          ========================================= -->
-    <footer class="footer">
 
-        <div
-            class="social-icons"
-            aria-label="Redes sociales"
-        >
+    <footer
+        id="contacto"
+        class="site-footer section-anchor"
+    >
 
-            <!-- Facebook -->
-            <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar Facebook"
-                class="social-link"
-            >
+        <div class="container-xxl">
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    class="social-icon"
-                >
-                    <path
-                        d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.02.28-1.72 1.75-1.72H17.1V2.4c-.32-.04-1.42-.14-2.7-.14-2.67 0-4.5 1.63-4.5 4.62V9.5H7V13h2.9v9h3.6Z"
-                    />
-                </svg>
+            <div class="row g-5 footer-main">
 
-            </a>
 
-            <!-- Instagram -->
-            <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visitar Instagram"
-                class="social-link"
-            >
+                <!-- Información -->
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    class="social-icon"
-                >
-                    <path
-                        d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.15 1.5a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
-                    />
-                </svg>
+                <div class="col-12 col-lg-4">
 
-            </a>
+                    <a
+                        href="#inicio"
+                        class="footer-brand"
+                    >
+
+                        <img
+                            src="img/logoMariscos.png"
+                            alt="Logo de Restaurante Mariscos"
+                        >
+
+                        <span>
+
+                            <strong>
+                                Restaurante Mariscos
+                            </strong>
+
+                            <small>
+                                S.A. de C.V.
+                            </small>
+
+                        </span>
+
+                    </a>
+
+
+                    <p class="footer-about-text">
+
+                        Mariscos frescos, buen sabor y una experiencia
+                        pensada para disfrutar con familia y amigos
+                        en Monterrey.
+
+                    </p>
+
+
+                    <p class="footer-about-text footer-about-secondary">
+
+                        Visítanos en cualquiera de nuestras tres sucursales
+                        y disfruta tus platillos favoritos del mar.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Enlaces -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <h2 class="footer-column-title">
+                        Enlaces Rápidos
+                    </h2>
+
+
+                    <nav
+                        class="footer-links"
+                        aria-label="Enlaces rápidos del pie de página"
+                    >
+
+                        <a href="#inicio">
+                            Inicio
+                        </a>
+
+                        <a href="#nosotros">
+                            Nosotros
+                        </a>
+
+                        <a href="#menu">
+                            Menú
+                        </a>
+
+                        <a href="#beneficios">
+                            Promociones
+                        </a>
+
+                        <a href="#resenas">
+                            Reseñas
+                        </a>
+
+                        <a href="#reservar">
+                            Reservar Mesa
+                        </a>
+
+                        <a href="#sucursales">
+                            Sucursales
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+
+                <!-- Contacto -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <h2 class="footer-column-title">
+                        Contacto
+                    </h2>
+
+
+                    <div class="footer-contact-list">
+
+
+                        <!-- WhatsApp -->
+
+                        <div class="footer-contact-item">
+
+                            <span class="footer-contact-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.496.099-.198.05-.372-.025-.521-.074-.149-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347Z"
+                                    />
+
+                                    <path
+                                        d="M20.52 3.449A11.815 11.815 0 0 0 12.11 0C5.547 0 .206 5.335.203 11.896c0 2.096.547 4.142 1.588 5.945L.102 24l6.304-1.654a11.88 11.88 0 0 0 5.699 1.452h.005c6.56 0 11.904-5.335 11.907-11.893a11.82 11.82 0 0 0-3.497-8.456ZM12.11 21.79h-.004a9.87 9.87 0 0 1-5.031-1.378l-.36-.214-3.741.981.998-3.647-.235-.374a9.86 9.86 0 0 1-1.51-5.262c.002-5.45 4.438-9.883 9.89-9.883a9.815 9.815 0 0 1 7.021 2.91 9.83 9.83 0 0 1 2.9 7.028c-.002 5.45-4.438 9.884-9.888 9.884Z"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    WhatsApp
+                                </strong>
+
+                                <a
+                                    href="https://wa.me/525634893797"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="js-whatsapp-link"
+                                    data-whatsapp-message="Hola, me gustaría solicitar información del restaurante."
+                                >
+                                    +52 56 3489 3797
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Correo -->
+
+                        <div class="footer-contact-item">
+
+                            <span class="footer-contact-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+
+                                    <path
+                                        d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"
+                                    />
+
+                                </svg>
+
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Correo
+                                </strong>
+
+                                <a href="mailto:contacto@restaurantemariscos.mx">
+                                    contacto@restaurantemariscos.mx
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="footer-socials">
+
+
+                        <!-- Instagram -->
+
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-button"
+                            aria-label="Instagram"
+                        >
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.15 1.5a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
+                                />
+
+                            </svg>
+
+                        </a>
+
+
+
+                        <!-- Facebook -->
+
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-button"
+                            aria-label="Facebook"
+                        >
+
+                            <svg viewBox="0 0 24 24">
+
+                                <path
+                                    d="M13.5 22v-9h3l.5-3.5h-3.5V7.25c0-1.02.28-1.72 1.75-1.72H17.1V2.4c-.32-.04-1.42-.14-2.7-.14-2.67 0-4.5 1.63-4.5 4.62V9.5H7V13h2.9v9h3.6Z"
+                                />
+
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr class="footer-line">
+
+
+            <div class="footer-bottom">
+
+                <p class="footer-copyright">
+
+                    © 2026 Restaurante Mariscos S.A. de C.V.
+                    Todos los derechos reservados.
+
+                </p>
+
+            </div>
 
         </div>
 
-        <p class="footer-text">
-            © 2026 Restaurante Mariscos S.A. de C.V.
-            Todos los derechos reservados.
-        </p>
-
     </footer>
+
+
+
+    <!-- =========================================
+         WHATSAPP FLOTANTE
+         ========================================= -->
+
+    <a
+        href="https://wa.me/525634893797"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-floating js-whatsapp-link"
+        data-whatsapp-message="Hola, me gustaría solicitar información del restaurante."
+        aria-label="Contactar por WhatsApp"
+        title="WhatsApp"
+    >
+
+        <img
+            src="img/WhatsApp_icon.png"
+            alt="WhatsApp"
+            class="whatsapp-logo-img"
+        >
+
+    </a>
+
+
+
+    <!-- =========================================
+         BOOTSTRAP JS
+         ========================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
+
+
+    <!-- =========================================
+         JS PROPIO
+         ========================================= -->
+
+    <script src="script.js"></script>
+
 
 </body>
 
